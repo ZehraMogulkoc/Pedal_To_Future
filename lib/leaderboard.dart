@@ -6,12 +6,13 @@ class LeaderBoard extends StatefulWidget {
 }
 
 class _LeaderBoardState extends State<LeaderBoard> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           backgroundColor: const Color(0xFF3E503C),
           leading: const Icon(Icons.arrow_back),
           actions: [
@@ -23,7 +24,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
           ),
           centerTitle: true,
           elevation: 0.0,
-        ),
+        ),*/
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -31,6 +32,10 @@ class _LeaderBoardState extends State<LeaderBoard> {
                 padding: const EdgeInsets.only(top: 40),
                 height: 330,
                 decoration: const BoxDecoration(
+                  gradient: LinearGradient(colors:[
+                    Color(0xFF789373),
+                    Color(0xFF0B3644),
+                    Color(0xFF170D2D),]),
                   color: Color(0xFF789373),
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(20),
@@ -42,7 +47,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                     Stack(
                       children: [
                         const CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/avatar.png'),
+                          backgroundImage: AssetImage('assets/images/users/u1.PNG'),
                           radius: 50,
                         ),
                         Positioned(
@@ -112,43 +117,346 @@ class _LeaderBoardState extends State<LeaderBoard> {
                 margin: const EdgeInsets.all(20),
                 child: SizedBox(
                   height: 300,
-                  child: ListView.separated(
+                  child: ListView(
                       shrinkWrap: true,
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Row(
-                            children: [
-                              CircleAvatar(
-                                child: Image.asset(
-                                  'assets/images/avatar.png',
-                                  width: 600.0,
-                                  height: 240.0,
-                                  fit: BoxFit.cover,
-                                ),
+                          children: [
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u1.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 1")
+                                ],
                               ),
-                              const SizedBox(
-                                width: 3,
+                              leading: Text(
+                                "#1",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
                               ),
-                              Text("  Kullanıcı ${index + 1}")
-                            ],
-                          ),
-                          leading: Text(
-                            "#${index + 1}",
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          trailing: Text(
-                            (200000 / (index + 1)).toString().substring(0, 5),
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        );
-                      },
-                      separatorBuilder: (context, index) => const Divider(
-                        thickness: 1,
-                        color: Color(0xFF789373),
-                        indent: 10,
-                        endIndent: 10,
-                      ),
-                      itemCount: 12),
+                              trailing: Text(
+                                ("20506"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u2.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 2")
+                                ],
+                              ),
+                              leading: Text(
+                                "#2",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("18456"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u4.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 3")
+                                ],
+                              ),
+                              leading: Text(
+                                "#3",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("14587"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u3.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 4")
+                                ],
+                              ),
+                              leading: Text(
+                                "#4",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("12470"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u12.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 5")
+                                ],
+                              ),
+                              leading: Text(
+                                "#5",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("9999"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u6.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 6")
+                                ],
+                              ),
+                              leading: Text(
+                                "#6",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("9255"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u7.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 7")
+                                ],
+                              ),
+                              leading: Text(
+                                "#7",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("7000"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u5.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 8")
+                                ],
+                              ),
+                              leading: Text(
+                                "#8",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("3800"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u9.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 9")
+                                ],
+                              ),
+                              leading: Text(
+                                "#9",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("1567"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u10.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 10")
+                                ],
+                              ),
+                              leading: Text(
+                                "#10",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("1024"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u11.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 11")
+                                ],
+                              ),
+                              leading: Text(
+                                "#11",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("247"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+
+                            ListTile(
+                              title: Row(
+                                children: [
+                                  CircleAvatar(
+                                    child: Image.asset(
+                                      'assets/images/users/u12.PNG',
+                                      width: 600.0,
+                                      height: 240.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("  Kullanıcı 12")
+                                ],
+                              ),
+                              leading: Text(
+                                "#12",
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: Text(
+                                ("125"),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Divider(color: Colors.black,endIndent: 10,indent: 10,),
+                          ],
+                        ),
                 ),
               )
             ],
