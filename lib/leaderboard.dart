@@ -42,7 +42,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                     Stack(
                       children: [
                         const CircleAvatar(
-                          backgroundImage: AssetImage('assets/avatar.png'),
+                          backgroundImage: AssetImage('assets/images/avatar.png'),
                           radius: 50,
                         ),
                         Positioned(
@@ -120,7 +120,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             children: [
                               CircleAvatar(
                                 child: Image.asset(
-                                  'assets/avatar.png',
+                                  'assets/images/avatar.png',
                                   width: 600.0,
                                   height: 240.0,
                                   fit: BoxFit.cover,
