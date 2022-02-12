@@ -12,19 +12,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        /*appBar: AppBar(
-          backgroundColor: const Color(0xFF3E503C),
-          leading: const Icon(Icons.arrow_back),
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
-          ],
-          title: const Text(
-            "Liderler",
-            style: TextStyle(fontSize: 29),
-          ),
-          centerTitle: true,
-          elevation: 0.0,
-        ),*/
         body: SingleChildScrollView(
           child: Column(
             children: [
