@@ -1,7 +1,9 @@
-import 'package:karbon_ayakizi/helpers/colors.dart';
-import 'package:karbon_ayakizi/helpers/text_theme.dart';
-import 'package:karbon_ayakizi/screens/home/startScreen.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../helpers/colors.dart';
+import '../../helpers/text_theme.dart';
+import '../home/startScreen.dart';
 
 class ReduceEmissionScreen extends StatelessWidget {
   static final routeName = "/reduce-carbon-footprint";

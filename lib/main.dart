@@ -10,11 +10,8 @@ import 'package:provider/provider.dart';
 import 'helpers/colors.dart';
 
 void main() async{
-
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp();
-  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
 }

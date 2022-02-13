@@ -1,7 +1,7 @@
-import 'package:karbon_ayakizi/helpers/helpers.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../helpers/helpers.dart';
 import '../result/result_screen.dart';
 import './user_input_questions.dart';
 import '../../helpers/colors.dart';
@@ -189,11 +189,11 @@ class _UserInputsState extends State<UserInputs> {
                 ),
               if (index == 1)
                 Align(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.topCenter,
                   child: Container(
                     height: size.height * 0.3,
                     child: Image.asset(
-                      'assets/images/car.png',
+                      'assets/images/car2.png',
                       fit: BoxFit.cover,
                     ),
                   ),

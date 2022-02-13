@@ -1,8 +1,10 @@
-import 'package:karbon_ayakizi/helpers/colors.dart';
-import 'package:karbon_ayakizi/helpers/text_theme.dart';
-import 'package:karbon_ayakizi/screens/reduce/reduce_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_xlider/flutter_xlider.dart';
+
+import '../../helpers/colors.dart';
+import '../../helpers/text_theme.dart';
+import '../reduce/reduce_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   final double userEmission;

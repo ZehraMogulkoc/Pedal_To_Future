@@ -34,7 +34,7 @@ dependencies:
   provider: ^6.0.1
   flutter_settings_ui: ^2.0.1
   http: ^0.13.4
-  firebase_core: ^1.10.6
+  firebase_core: ^1.12.0
   firebase_auth: ^3.3.4
   cloud_firestore: ^3.1.5
   fluttertoast: ^8.0.8
@@ -53,6 +53,7 @@ dependencies:
   flame_flare: ^1.0.0
   flutter_xlider: ^3.4.0
   flare_flutter: ^3.0.2
+
 
 
 

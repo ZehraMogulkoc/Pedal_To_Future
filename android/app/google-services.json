@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "626197723840",
+    "project_id": "pedal-to-future",
+    "storage_bucket": "pedal-to-future.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626197723840:android:9a3bfa7c6eec71a31f0b25",
+        "android_client_info": {
+          "package_name": "com.example.flutter_fest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626197723840-6jhi1elsnkvr6hv5o2l7060e0iams4il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAneUKz4jBaAkvHZRxqgNMRBQnfPxMM8OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626197723840-6jhi1elsnkvr6hv5o2l7060e0iams4il.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

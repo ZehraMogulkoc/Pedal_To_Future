@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'secret.dart';
 
-class MapView extends StatefulWidget {
+class MapPage extends StatefulWidget {
   @override
-  _MapViewState createState() => _MapViewState();
+  _MapPageState createState() => _MapPageState();
 }
 
-class _MapViewState extends State<MapView> {
+class _MapPageState extends State<MapPage> {
   CameraPosition _initialLocation = CameraPosition(target: LatLng(0.0, 0.0));
   late GoogleMapController mapController;
 

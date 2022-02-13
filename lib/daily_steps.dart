@@ -297,7 +297,7 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
 
   Widget _stepsFetched() {
     return Text(
-      'Bugünkü toplam adım sayısı: $_nofSteps',
+      'Bugünkü toplam adım sayısı: $_nofSteps ',
       style: TextStyle(
         color: Color(0xFF3E503C),
         fontSize: 28,

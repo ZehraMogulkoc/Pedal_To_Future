@@ -1,8 +1,9 @@
-import 'package:karbon_ayakizi/helpers/colors.dart';
-import 'package:karbon_ayakizi/screens/calculator/user_inputs.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+
+import '../../helpers/colors.dart';
+import '../calculator/user_inputs.dart';
 
 const TextStyle kTextStyle = TextStyle(
   fontSize: 24.0,
