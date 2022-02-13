@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fest/homepage.dart';
+import 'daily_steps.dart';
 import 'drawer.dart';
 import 'end_drawer.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -21,7 +22,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     ),
     MyRoute(
       iconData: Icons.calendar_today,
-      page: Container(),
+      page: DailyStepsCount(),
     ),
     MyRoute(
       iconData: Icons.person,
