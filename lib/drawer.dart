@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+import 'package:flutter_fest/View/CommentScreen.dart';
+
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                'Sosyal Medya',
+                'Değerlendirmeler',
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
@@ -70,10 +72,10 @@ class MyDrawer extends StatelessWidget {
                 ),
                   ),
                   onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  CommentScreen()),
+                    );
                   },
                   leading: new Icon(
                 Icons.message,
