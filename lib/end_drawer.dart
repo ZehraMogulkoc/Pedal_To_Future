@@ -31,7 +31,7 @@ class MyEndDrawer extends StatelessWidget {
                     ),
                   ),
                   accountEmail: new Text(
-                    'Account Settings',
+                    'Hesap Ayarları',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
@@ -41,7 +41,7 @@ class MyEndDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                    'Profile & Security',
+                    'Profil ve Güvenlik',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class MyEndDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                    'Notifications',
+                    'Bildirimler',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.w600,
@@ -81,33 +81,12 @@ class MyEndDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                new ListTile(
-                  title: new Text(
-                    'Favorites',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                    // Then close the drawer
-                    Navigator.pop(context);
-                  },
-                  leading: new Icon(
-                    Icons.favorite,
-                    size: 26.0,
-                    color: Colors.black,
-                  ),
-                ),
                 new Divider(
                   color: Colors.black38,
                 ),
                 new ListTile(
                   title: new Text(
-                    'About WelakaOne',
+                    'About Pedal to Future',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.w600,
@@ -129,28 +108,7 @@ class MyEndDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                    'Close Menu',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                    // Then close the drawer
-                    Navigator.pop(context);
-                  },
-                  leading: new Icon(
-                    Icons.close,
-                    size: 26.0,
-                    color: Colors.black,
-                  ),
-                ),
-                new ListTile(
-                  title: new Text(
-                    'Log Out & Exit',
+                    'Çıkış yap',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.w600,
