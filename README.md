@@ -3,6 +3,10 @@
  If you liked our work, don’t forget to ⭐ star the repo to show your support.
  Note: Uygulama test aşamasında olduğu için Adım Sayısı sadece tanımladığımız google fit hesaplarında hesaplanabiliyor. 
  </p>Test Google Hesabı: mprogramming205@gmail.com     Şifre: takecareofyou
+ </p>Settings in android studio are required for the code to work
+</p>In Android Studio:
+Run --> Edit Configurations --> Add Additional Run args --> --no-sound-null-safety
+
 
 # ⚡ Features
 * Splash Screen
@@ -17,23 +21,19 @@
 ## 📸 Screenshots
 <p align = "center">
 <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/signin-removebg-preview.png" alt="feed example" width="210"> 
-<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/home-removebg-preview.png" alt="feed example" width="210">
-
+<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/home-removebg-preview.png" alt="feed example" width="207">
 <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/map-removebg-preview.png" alt="feed example" width="210">
 </p>
 <p align ="center">
-<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/adim_syar-removebg-preview.png" alt="feed example" width="205">
-<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/co2-removebg-preview.png" alt="feed example" width="225">
+<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/adim_syar-removebg-preview.png" alt="feed example" width="210">
+<img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/co2-removebg-preview.png" alt="feed example" width="206">
 <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/co2_footprint-removebg-preview.png" alt="feed example" width="210">
 </p>
 <p align = "center">
-  <img src=" https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/prize-removebg-preview.png" alt="feed example" width="220">
- <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/odul_detay-removebg-preview.png" alt="feed example" width="220">
+ <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/prize-removebg-preview.png" alt="feed example" width="220">
+ <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/odul_detay-removebg-preview.png" alt="feed example" width="224">
  <img src="https://github.com/ZehraMogulkoc/Pedal_To_Future/blob/main/secreenshots/leaderboard-removebg-preview.png" alt="feed example" width="220">
 
-Settings in android studio are required for the code to work
-In Android Studio:
-Run --> Edit Configurations --> Add Additional Run args --> --no-sound-null-safety
 
 
 ## Getting Started
