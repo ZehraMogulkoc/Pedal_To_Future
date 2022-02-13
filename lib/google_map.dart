@@ -219,15 +219,7 @@ class _MapPageState extends State<MapPage> {
         ),
       );
 
-      // Calculating the distance between the start and the end positions
-      // with a straight path, without considering any route
-      // double distanceInMeters = await Geolocator.bearingBetween(
-      //   startLatitude,
-      //   startLongitude,
-      //   destinationLatitude,
-      //   destinationLongitude,
-      // );
-
+      
       await _createPolylines(startLatitude, startLongitude, destinationLatitude,
           destinationLongitude);
 
