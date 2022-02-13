@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'login_page.dart';
+
 class MyEndDrawer extends StatelessWidget {
+  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -154,7 +158,8 @@ class MyEndDrawer extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    _auth.signOut();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
                   },
                   leading: new Icon(
                     Icons.exit_to_app,
