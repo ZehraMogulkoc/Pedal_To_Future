@@ -163,7 +163,7 @@ class detailScreen extends StatelessWidget {
             child: SingleChildScrollView(child: Text(_items[count].shortDescription)),
           ),
 
-          Expanded(flex: 2,child: SingleChildScrollView(child: card())),
+          Expanded(flex: 2, child: SingleChildScrollView(child: card())),
 
         ],)),
       ),
