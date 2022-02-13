@@ -38,30 +38,10 @@ class MyDrawer extends StatelessWidget {
                     ),
                   ),
                 ),
+                
                 new ListTile(
                   title: new Text(
-                    'News (gen set)',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                    // Then close the drawer
-                    Navigator.pop(context);
-                  },
-                  leading: new Icon(
-                    Icons.add_to_home_screen,
-                    size: 26.0,
-                    color: Colors.black,
-                  ),
-                ),
-                new ListTile(
-                  title: new Text(
-                'Color & Design',
+                'Görünüm',
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
@@ -82,7 +62,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                'Social Media',
+                'Sosyal Medya',
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
@@ -103,7 +83,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text(
-                'Login Options',
+                'Giriş Seçenekleri',
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
@@ -124,27 +104,6 @@ class MyDrawer extends StatelessWidget {
                 ),
                 new Divider(
                   color: Colors.black38,
-                ),
-                new ListTile(
-                  title: new Text(
-                'Close Menu',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
-                  ),
-                  onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-                  },
-                  leading: new Icon(
-                Icons.close,
-                size: 26.0,
-                color: Colors.black,
-                  ),
                 ),
               ],
             ),
