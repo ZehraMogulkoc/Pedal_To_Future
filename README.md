@@ -1,5 +1,5 @@
 # 🚲 Pedal to Future
- A working meditation app built in Flutter using Firebase/Firestore.
+ A working sustainable transportatıon app built in Flutter using Firebase.
  If you liked our work, don’t forget to ⭐ star the repo to show your support.
  Note: Uygulama test aşamasında olduğu için Adım Sayısı sadece tanımladığımız google fit hesaplarında hesaplanabiliyor. 
  </p>Test Google Hesabı: mprogramming205@gmail.com     Şifre: takecareofyou
@@ -11,8 +11,9 @@ Run --> Edit Configurations --> Add Additional Run args --> --no-sound-null-safe
 # ⚡ Features
 * Splash Screen
 * Sign in / Sign up
-* Step Counting
+* Step Counting usıng Google Fit
 * Carbon Footprınt Calculation
+* Google Maps Services
 * Earning points according to Carbon footprınt and step count
 * Leaderboard based on user poınts
 * Chance to get prizes according to user points
