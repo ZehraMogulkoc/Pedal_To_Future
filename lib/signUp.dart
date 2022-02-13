@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -16,9 +15,9 @@ class SignUp extends StatefulWidget {
 var name;
 
 class _SignUpState extends State<SignUp> {
-  //final _auth=FirebaseAuth.instance;
-  //FirebaseFirestore firestore=FirebaseFirestore.instance;
-  //CollectionReference userRef= FirebaseFirestore.instance.collection('Data');
+  final _auth=FirebaseAuth.instance;
+  FirebaseFirestore firestore=FirebaseFirestore.instance;
+  CollectionReference userRef= FirebaseFirestore.instance.collection('Data');
 
   String email='';
   String password='';
@@ -27,32 +26,32 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
 
       resizeToAvoidBottomInset: true,
-
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Pedal To Future'),
+        backgroundColor: Colors.green,
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
+
         decoration: BoxDecoration(
+
           image: DecorationImage(
-            image: AssetImage('assets/images/bg3.jpg'),
-            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), // 0 = Colored, 1 = Black & White
-              BlendMode.saturation,),
+            image: AssetImage('assets/images/bg1.jpg'),
             fit: BoxFit.fill,
           ),
         ),
         child: SafeArea(
           child: Center(
-            child: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: Colors.black.withOpacity(.6),
-              child: SingleChildScrollView(
+            child: SingleChildScrollView(
+              child: Container(
+                color: Colors.white10.withOpacity(0.6),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: 100,),
-                    TextMethod('Enter Username'),
-                    SizedBox(height: 20,),
+                    TextMethod('Kullanıcı Adını Giriniz'),
                     Padding(
                       padding: const EdgeInsets.only(right: 10.0, left: 10),
                       child: TextFormField(
@@ -61,10 +60,11 @@ class _SignUpState extends State<SignUp> {
                         textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.teal),
+                            borderSide: BorderSide(color: Colors.white),
                           ),
-                          labelText: "Username",
+                          labelText: "Kullanıcı Adı",
                           labelStyle: TextStyle(
+                            color: Colors.white,
                             fontFamily: 'Roboto',
                           ),
                           border: OutlineInputBorder(),
@@ -76,10 +76,9 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 20,
                     ),
-                    TextMethod('Enter Your Email'),
-                    SizedBox(height: 20,),
+                    TextMethod('Email Giriniz'),
                     Padding(
                       padding: const EdgeInsets.only(right: 10.0, left: 10),
                       child: TextFormField(
@@ -88,10 +87,11 @@ class _SignUpState extends State<SignUp> {
                         textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.teal),
+                            borderSide: BorderSide(color: Colors.white),
                           ),
                           labelText: "Email",
                           labelStyle: TextStyle(
+                            color: Colors.white,
                             fontFamily: 'Roboto',
                           ),
                           border: OutlineInputBorder(),
@@ -104,11 +104,11 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 20,
                     ),
 
-                    TextMethod('Enter Password'),
-                    SizedBox(height: 20,),
+                    TextMethod('6 Haneli Şifreyi Giriniz'),
+
                     Padding(
                       padding: const EdgeInsets.only(right: 10.0, left: 10),
                       child: TextFormField(
@@ -116,10 +116,11 @@ class _SignUpState extends State<SignUp> {
                         keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF65AC46)),
+                            borderSide: BorderSide(color: Colors.white),
                           ),
-                          labelText: "Password",
+                          labelText: "Şifre",
                           labelStyle: TextStyle(
+                            color: Colors.white,
                             fontFamily: 'Roboto',
                           ),
                           border: OutlineInputBorder(),
@@ -137,7 +138,7 @@ class _SignUpState extends State<SignUp> {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            Color(0xFF65AC46)),
+                            Colors.green),
                         shape:
                         MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
@@ -147,8 +148,8 @@ class _SignUpState extends State<SignUp> {
                       ),
 
                       onPressed: () async {
-                        /*Map<String, dynamic> userData={'Email': email,'Name': name};
-                        //userRef.doc(email).set(userData);
+                        Map<String, dynamic> Data={'Email': email,'Name': name};
+                        userRef.doc(email).set(Data);
 
                         try {
                           final newUser = await _auth
@@ -157,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                           if(newUser!= null){
 
                             Fluttertoast.showToast(
-                                msg: "Account created successfully",
+                                msg: "Hesap Başarıyla Oluşturuldu",
                                 toastLength: Toast.LENGTH_LONG,
                                 gravity: ToastGravity.BOTTOM,
                                 timeInSecForIosWeb: 1,
@@ -175,10 +176,10 @@ class _SignUpState extends State<SignUp> {
                         }
                         catch(e){
                           print(e);
-                        }*/
+                        }
                       },
                       child: Text(
-                        'Hesap Olustur',
+                        'Hesabı Oluştur',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 21,
@@ -209,7 +210,7 @@ TextMethod(String value) {
       value,
       textAlign: TextAlign.left,
       style: TextStyle(
-        color: Color(0xFF759C72),
+        color: Colors.green,
         fontSize: 20,
       ),
     ),
