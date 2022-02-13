@@ -43,11 +43,17 @@ dependencies:
   heart_bpm: ^1.1.1+0
   sqflite: ^2.0.2
   curved_navigation_bar: ^1.0.3
+  decimal: ^2.1.0
+  percent_indicator: ^4.0.0
   google_maps_flutter: ^2.1.1
   dio: ^4.0.0
   flutter_polyline_points: ^1.0.0
   geolocator: ^7.0.3
   geocoding: ^2.0.0
+  flame_flare: ^1.0.0
+  flutter_xlider: ^3.4.0
+  flare_flutter: ^3.0.2
+
 
 
   # The following adds the Cupertino Icons font to your application.
