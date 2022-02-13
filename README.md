@@ -1,6 +1,11 @@
 # flutter_fest
+Note: Uygulama test aşamasında olduğu için Adım Sayısı sadece tanımladığımız google fit hesaplarında hesaplanabiliyor. 
+Test Google Hesabı: mprogramming205@gmail.com     Şifre: takecareofyou
 
-A new Flutter project.
+Settings in android studio are required for the code to work
+In Android Studio:
+Run --> Edit Configurations --> Add Additional Run args --> --no-sound-null-safety
+
 
 ## Getting Started
 
