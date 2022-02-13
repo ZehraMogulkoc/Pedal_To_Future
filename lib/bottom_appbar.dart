@@ -1,5 +1,9 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_fest/google_map.dart';
 import 'package:flutter_fest/homepage.dart';
+import 'package:flutter_fest/screens/home/startScreen.dart';
 import 'daily_steps.dart';
 import 'drawer.dart';
 import 'end_drawer.dart';
@@ -21,16 +25,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
       page: HomePage(),
     ),
     MyRoute(
-      iconData: Icons.calendar_today,
+      iconData: Icons.directions_run_sharp,
       page: DailyStepsCount(),
     ),
     MyRoute(
-      iconData: Icons.person,
-      page: Container(),
+      iconData: Icons.flare_outlined,
+      page: StartScreen(),
     ),
     MyRoute(
       iconData: Icons.map,
-      page: Container(),
+      page: MapPage(),
     ),
     MyRoute(
       iconData: Icons.card_giftcard_outlined,
@@ -38,9 +42,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     ),
     MyRoute(
       iconData: Icons.leaderboard_outlined,
-      page:Container(child: Center(
-        child: Container(child: Text('Leaderboard'),),
-      ),),
+      page:LeaderBoard()
     ),
   ];
 
