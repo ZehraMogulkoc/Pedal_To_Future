@@ -1,6 +1,6 @@
 # 🚲 Pedal to Future
  A working sustainable transportatıon app built in Flutter using Firebase.
- If you liked our work, don’t forget to ⭐ star the repo to show your support.
+ </p>If you liked our work, don’t forget to ⭐ star the repo to show your support.
  Note: Uygulama test aşamasında olduğu için Adım Sayısı sadece tanımladığımız google fit hesaplarında hesaplanabiliyor. 
  </p>Test Google Hesabı: mprogramming205@gmail.com     Şifre: takecareofyou
  </p>Settings in android studio are required for the code to work
