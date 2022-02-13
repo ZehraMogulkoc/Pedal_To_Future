@@ -1,19 +1,27 @@
-import 'package:karbon_ayakizi/helpers/colors.dart';
-import 'package:karbon_ayakizi/screens/home/startScreen.dart';
-import 'package:karbon_ayakizi/screens/reduce/reduce_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_fest/login_page.dart';
+import 'package:flutter_fest/screens/calculator/user_input_questions.dart';
+import 'package:flutter_fest/screens/calculator/user_inputs.dart';
+import 'package:flutter_fest/screens/home/startScreen.dart';
+import 'package:flutter_fest/screens/reduce/reduce_screen.dart';
 import 'package:provider/provider.dart';
 
-import './screens/result/result_screen.dart';
-import './screens/calculator/user_inputs.dart';
-import './screens/calculator/user_input_questions.dart';
+import 'helpers/colors.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -43,7 +51,7 @@ class MyApp extends StatelessWidget {
         //         averageEmission: 50,
         //       ),//HomeScreen.routeName,
         routes: {
-          StartScreen.routeName: (context) => StartScreen(),
+          StartScreen.routeName: (context) => LoginPage(),
           UserInputs.routeName: (context) => UserInputs(),
           ReduceEmissionScreen.routeName: (context) => ReduceEmissionScreen(),
         },
