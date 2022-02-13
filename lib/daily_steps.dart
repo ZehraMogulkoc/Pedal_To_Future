@@ -54,7 +54,7 @@ Widget card() {
                   alignment: Alignment.bottomCenter,
                   child: Center(
                     child: Text(
-                     'Erişim Kodu: '+ generateAccescode(),style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                      'Erişim Kodu: '+ generateAccescode(),style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                     ),
                   ),
                 ),
@@ -139,13 +139,13 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
     // note that strictly speaking, the [permissions] are not
     // needed, since we only want READ access.
     bool requested =
-        await health.requestAuthorization(types, permissions: permissions);
+    await health.requestAuthorization(types, permissions: permissions);
 
     if (requested) {
       try {
         // fetch health data
         List<HealthDataPoint> healthData =
-            await health.getHealthDataFromTypes(yesterday, now, types);
+        await health.getHealthDataFromTypes(yesterday, now, types);
 
         // save all the new data points (only the first 100)
         _healthDataList.addAll((healthData.length < 100)
@@ -164,7 +164,7 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
       // update the UI to display the results
       setState(() {
         _state =
-            _healthDataList.isEmpty ? AppState.NO_DATA : AppState.DATA_READY;
+        _healthDataList.isEmpty ? AppState.NO_DATA : AppState.DATA_READY;
       });
     } else {
       print("Authorization not granted");
@@ -185,7 +185,7 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
       HealthDataAccess.READ_WRITE
     ];
     bool? hasPermissions =
-        await HealthFactory.hasPermissions(types, permissions: rights);
+    await HealthFactory.hasPermissions(types, permissions: rights);
     if (hasPermissions == false) {
       await health.requestAuthorization(types, permissions: permissions);
     }
@@ -196,7 +196,7 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
 
     if (success) {
       success =
-          await health.writeHealthData(_mgdl, HealthDataType.WORKOUT, now, now);
+      await health.writeHealthData(_mgdl, HealthDataType.WORKOUT, now, now);
     }
 
     setState(() {
@@ -332,10 +332,10 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
 
 
 
-      final scaffold = ScaffoldMessenger.of(context);
+    final scaffold = ScaffoldMessenger.of(context);
     scaffold.showSnackBar(
-        SnackBar(
-
+        SnackBar(duration: Duration(days: 1),
+backgroundColor: Colors.green,
           content: const Text('Ödül Kazandın'),
           action: SnackBarAction(
               label: 'Ödüle git', onPressed:(){ if (steps >= 1000&&steps<2000){
@@ -394,50 +394,69 @@ class _DailyStepsCountState extends State<DailyStepsCount> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 50),
-              Card(
-                color: Colors.green.withOpacity(0.7),
-                elevation: 3,
-                shape: StadiumBorder(
-                  side: BorderSide(
-                    color: Colors.greenAccent,
-                    width: 2.0,
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/bg7.jpg'),
+              fit: BoxFit.fill,
+            ),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(color: Colors.white.withOpacity(0.6),child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Uzun bir mesafeye konfor alanından çıkarak sürdürülebilir ulaşım modlarını kullan. Hem doğanın hem de bizim sana vereceğimiz bazı hediyelerin tadını çıkar :)',style:
+                    TextStyle(color: Color(0xFF0C3102),fontSize: 18)),
+                  ),),
+                ),
+                SizedBox(height: 20),
+                Card(
+                  color: Colors.green.withOpacity(0.6),
+                  elevation: 3,
+                  shape: StadiumBorder(
+                    side: BorderSide(
+                      color: Colors.greenAccent,
+                      width: 2.0,
+                    ),
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.only(
+                      top: 10,
+                      bottom: 30,
+                      right: 20,
+                      left: 20,
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        _content(),
+                      ],
+                    ),
                   ),
                 ),
-                child: Container(
-                  margin: const EdgeInsets.only(
-                    top: 10,
-                    bottom: 30,
-                    right: 20,
-                    left: 20,
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    fetchStepData();
+                  },
+                  child: Text(
+                    'Toplam Adım Sayısı',
                   ),
-                  child: Column(
-                    children: <Widget>[
-                      _content(),
-                    ],
-                  ),
+                  style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF3E503C),
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      textStyle:
+                      TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
                 ),
-              ),
-              Spacer(),
-              ElevatedButton(
-                onPressed: () {
-                  fetchStepData();
-                },
-                child: Text(
-                  'Toplam Adım Sayısı',
-                ),
-                style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF3E503C),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    textStyle:
-                        TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-              ),
-              SizedBox(height: 100),
-            ],
+                SizedBox(height: 100),
+              ],
+            ),
           ),
         ),
       ),
