@@ -24,11 +24,8 @@ class Prizes extends StatefulWidget   {
   _PrizesState createState() => _PrizesState();
 }
 
-class _PrizesState extends State<Prizes>  with ChangeNotifier{
-  @override
-  void dispose(){
-    super.dispose();
-  }
+class _PrizesState extends State<Prizes>  {
+
   @override
   Widget build(BuildContext context) {
     void conditions(int id){
@@ -115,7 +112,7 @@ class _PrizesState extends State<Prizes>  with ChangeNotifier{
                 children: _items.map((item) => InkWell(
                   onTap: (){
                     conditions(item.id);
-                    },
+                  },
 
                   child: Card(
                     child: Container(
@@ -170,4 +167,3 @@ class detailScreen extends StatelessWidget {
     );
   }
 }
-
