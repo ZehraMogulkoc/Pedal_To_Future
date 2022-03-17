@@ -2,7 +2,7 @@
  A working sustainable transportatıon app built in Flutter using Firebase.
  </p>If you liked our work, don’t forget to ⭐ star the repo to show your support.
  Note: Uygulama test aşamasında olduğu için Adım Sayısı sadece tanımladığımız google fit hesaplarında hesaplanabiliyor. 
- </p>Test Google Hesabı: mprogramming205@gmail.com     Şifre: takecareofyou
+ </p>Test Google Hesabı: mprogramming205@gmail.com     
  </p>Settings in android studio are required for the code to work
 </p>In Android Studio:
 Run --> Edit Configurations --> Add Additional Run args --> --no-sound-null-safety
